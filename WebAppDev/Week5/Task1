@@ -1,0 +1,43 @@
+1.
+Entities: Blog, and article
+blog(id, title, creator)
+Article(id, headline, text, author, blog_id)
+
+2.
+Entities: Newspaper, issues, articles, photo
+Issue(Id, Date)
+Article(Id, Headline, text, author, issue_id)
+Photo(Id, Caption, photog, image)
+Article_Photo(Article_id, Photo_id)
+
+3.
+Entities: Journal, Article, Authors, References
+Journal(id, name, date)
+Article(id, title, date, body, journal_id)
+Author(id, name, date, affiliation, article_id)
+Reference(id, title, date, body, author_id, article_id)
+
+
+Task 2:
+
+1. 
+select title from blog like '%Japan%';
+
+2.
+select title from blog, article where blog.id = article.blog_id and like '%Japan%';
+
+3.
+select title from blogs, article where blog.creator = article.author;\
+
+4
+*a)
+sqlite> select name from customers where address like '%Nathan%';
+Sally
+
+*b) 
+
+sqlite> select custId from orders where ItemId ='2';
+2
+3
+
+Therefore, names = Sally, John
